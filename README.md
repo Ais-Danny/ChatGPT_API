@@ -1,4 +1,9 @@
 # <b>ChatGPT_API</b>
+
+## <b>简介</b>
+1. 此程序实现了ChatGPT API的二次开发
+2. 与微信小程序平台关联，添加了认证功能
+3. 可自定义ChatGPT API代理
 ### <b>POST接口</b>
 - <b>/api/login/creatToken</b><br>
 创建token, 在请求头中填入"js_code"参数,此参数由下面代码产生
