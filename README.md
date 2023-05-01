@@ -93,3 +93,7 @@ appId，appSecret查阅微信开发者平台获取
 ```shell
 npm run start
 ```
+
+## <b>附录</b>
+
+npm run ssl 可启动https加密，需要在scr/ssl中添加server.crt,server.key证书(命名必需一样)
