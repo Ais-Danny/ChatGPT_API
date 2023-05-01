@@ -2,4 +2,4 @@ config.json
 test
 logs/*
 node_modules
-src/ssl/*
+src/ssl/server*
