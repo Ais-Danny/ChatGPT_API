@@ -24,12 +24,8 @@ function routes_init() {
 
     app.use(cors());//允许跨域
 
-    app.use("/", require('../routes/index'))//导入默认一级路由
-
-    app.use('/api',
-        // authInterceptor,//校验请求头,DEV测试
-        require('../routes/chat'))
-
+    app.use("/api/login", require('../routes/index'))//导入默认一级路由
+    app.use('/api/v1', require('../routes/chat'))
     app.listen(global.config.port, function () {
         global.logger.info("路由启动成功");
     })

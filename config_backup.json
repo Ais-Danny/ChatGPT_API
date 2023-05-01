@@ -1,6 +1,7 @@
 {
     "文件名必须修改为config.json才能生效":"",
-
+    
+    "port":3000,
     "chat": {
         "OpenAi密钥": "",
         "key": "",
