@@ -23,8 +23,8 @@ function routes_init() {
 
     app.use(cors());//允许跨域
 
-    app.use("/api/login", require('../routes/index'))
-    app.use('/api/v1', require('../routes/chat'))
+    app.use("/api/login", require('./routes/index'))
+    app.use('/api/v1', require('./routes/chat'))
 
     app.listen(global.config.port, function () {
         global.logger.info("路由启动成功");
