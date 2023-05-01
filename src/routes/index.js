@@ -1,5 +1,5 @@
 var express = require('express');
-const Result = require('../src/entity/result');
+const Result = require('../entity/result');
 const axios = require('axios')
 const jwt = require('jsonwebtoken');
 var router = express.Router();

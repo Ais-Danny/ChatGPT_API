@@ -1,6 +1,6 @@
 const express = require('express');
-const sendChatGPT = require('../src/utils/sendChatGPT');
-const interceptor=require('../src/utils/interceptor')
+const sendChatGPT = require('../utils/sendChatGPT');
+const interceptor=require('../utils/interceptor')
 const router = express.Router();
 
 router.post('/chat', (req, res)=> {
