@@ -1,0 +1,23 @@
+{
+    "文件名必须修改为config.json才能生效":"",
+
+    "chat": {
+        "OpenAi密钥": "",
+        "key": "",
+
+        "最大tokens限制": "",
+        "max_tokens": 512,
+
+        "token过期时间": "",
+        "token_live_time": "30min"
+    },
+
+    "对称密钥": "保持所有节点一致即可,密钥泄漏会导致伪造token进行会话,请妥善保管",
+    "private_key": "gpt_good",
+
+    "代理服务器": "//默认https://api.openai.com",
+    "proxy": "https://api.openai.com",
+
+    "appId": "",
+    "appSecret": ""
+}
