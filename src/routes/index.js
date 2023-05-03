@@ -14,7 +14,7 @@ router.post('/creatToken', async (req, res) => {
   let code = req.headers['js_code']
   if (req.headers['js_code'] == null) {
     global.logger.warn(` 403,无效code,禁止生成token, ip: ${req.ip}`)
-    res.send(new Result("无效code,禁止生成token", 403, false))
+    res.send(new Result(`无效code:${req.headers['js_code']},禁止生成token`, 403, false))
     return
   }
   const url = `https://api.weixin.qq.com/sns/jscode2session?appid=${global.config.appId}&secret=${global.config.appSecret}&js_code=${code}&grant_type=authorization_code`
@@ -26,7 +26,7 @@ router.post('/creatToken', async (req, res) => {
     global.logger.warn(`生成新token, ip: ${req.ip} ,openid: ${userinfo.openid}`)
   } else {
     global.logger.warn(` 403,无效code,禁止生成token, ip: ${req.ip}`)
-    res.send(new Result("无效code,禁止生成token", 403, false))
+    res.send(new Result(`无效code:${req.headers['js_code']},禁止生成token`, 403, false))
   }
 });
 
