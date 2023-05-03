@@ -26,6 +26,7 @@ async function readStream(url, data, requestOptions, req, res) {
         req.on('close', () => {
             source.cancel("请求中断/取消")//停止向openai连接，防止内存溢出
             res.end("请求中断/取消"); // 关闭流
+            console.log("请求中断/取消")
         });
     }).catch(function (error) {
         res.end(error.toString());
