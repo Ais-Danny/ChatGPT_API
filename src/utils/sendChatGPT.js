@@ -7,7 +7,6 @@ const url = proxy + "/v1/chat/completions"
 function sendChatGPT(req, res) {
     global.ordinal = (global.ordinal + 1) % (global.config.chat.keys.length)//keys轮询
     const key = global.config.chat.keys[global.ordinal]
-    console.log(key)
     const headers = {
         'Content-Type': 'application/json',
         'Authorization': 'Bearer ' + key,
