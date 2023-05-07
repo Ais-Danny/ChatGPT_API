@@ -10,6 +10,7 @@ fs.readFile('config.json', 'utf8', (err, data) => {//加载环境变量
         throw err
     };
     global.config = JSON.parse(data);
+    global.ordinal = 0 //为key排序号,代表当前请求key的下标
     init()
 });
 

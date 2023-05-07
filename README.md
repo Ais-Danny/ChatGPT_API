@@ -4,6 +4,8 @@
 1. 此程序实现了ChatGPT API的二次开发
 2. 与微信小程序平台关联，添加了认证功能
 3. 可自定义ChatGPT API代理
+4. 轮询多个key
+5. 支持回答流式输出
 ### <b>POST接口</b>
 - <b>/api/login/creatToken</b><br>
 创建token, 在请求头中填入"js_code"参数,此参数由下面代码产生
@@ -70,7 +72,9 @@ appId，appSecret查阅微信开发者平台获取
     "port":3000,
     "chat": {
         "OpenAi密钥": "",
-        "key": "",
+        "keys": [
+            "可填写多个key"
+        ],
 
         "最大tokens限制": "",
         "max_tokens": 512,
